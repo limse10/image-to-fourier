@@ -17,17 +17,17 @@ PImage canny;
 
 PImage bg;
 
-String path = "Images/cp.jpg";
+String path = "Images/z.jpeg";
 
 
 
 
 
-float scale = 0.7;
+float scale = 0.9;
 float paf = 2;
-int min =255;
+int min =20;
 int max=50;
-int speed = 30;
+int speed = 15;
 
 
 int mode = 0;
@@ -90,7 +90,7 @@ void search(int index) {
     float closestdist=100000;
     for (int i =0; i<contours.size(); i++) {
       if (!visited[i]) {
-        float dist = dist(cPoints[index][0].x, cPoints[index][0].y, cPoints[i][0].x, cPoints[i][0].y);
+        float dist = dist(cPoints[index][cPoints[index].length-1].x, cPoints[index][cPoints[index].length-1].y, cPoints[i][0].x, cPoints[i][0].y);
         if (dist<closestdist) {
           closestdist=dist;
           closestcontour=i;

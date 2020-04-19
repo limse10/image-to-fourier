@@ -68,7 +68,7 @@ class Fourier {
 
 
     theta+=step;
-    if (theta>2*PI-70*step) {
+    if (theta>2*PI) {
       theta=0;
       noLoop();
       //trace = new PVector[0];
