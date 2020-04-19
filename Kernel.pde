@@ -17,7 +17,6 @@ class Kernel {
       this.normalise();
 
 
-      println(kernel[1][1]);
     }
   }
 
